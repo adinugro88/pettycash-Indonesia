@@ -4,6 +4,13 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-9">
+            <div class="col-12 mb-5">
+                <a href="inputkas/{{$kas->id}}" class="btn btn-success">Input Kas Masuk</a>
+                <a href="outputkas/{{$kas->id}}" class="btn btn-warning">Input Kas keluar</a>
+                <a href="reportkas/{{$kas->id}}" class="btn btn-info">Laporan</a>
+            </div>
+           
+            
             <div class="card  col-12">
                 <div class="card-header">
                     <div class="row">
