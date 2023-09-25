@@ -13,6 +13,9 @@ return new class extends Migration
     {
         Schema::create('kasmasuks', function (Blueprint $table) {
             $table->id();
+            $table->integer("nilaimasuk");
+            $table->text("keterangan");
+            $table->foreignId('kas')->index()->constrained()->cascadeOnDelete();
             $table->timestamps();
         });
     }
