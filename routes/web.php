@@ -18,7 +18,13 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Auth::routes();
+// Auth::routes();
+
+Route::group(['prefix' => 'admin',  'middleware' => 'auth'], function()
+{
+    //All the routes that belongs to the group goes here
+    Route::get('dashboard', function() {} );
+});
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/kaskecil/{id}', [App\Http\Controllers\KaskecilController::class, 'index'])->name('kaskecil');
